@@ -3,6 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Link from 'next/link';
 
+
+// !! IMPORTANT !!
+// Nav.Link was causing hydration errors and I could not solve the issue.
 export default function MainNav() {
    return (
       <div>
@@ -12,8 +15,8 @@ export default function MainNav() {
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                     <Link href="/" passHref><Nav.Link>Movies</Nav.Link></Link>
-                     <Link href="/about" passHref><Nav.Link>About</Nav.Link></Link>
+                     <Link href="/" >Movies</Link>
+                     <Link href="/about" >About</Link>
                   </Nav>
                </Navbar.Collapse>
             </Container>

@@ -4,7 +4,7 @@ export default function PageHeader(text) {
       <div>
          <Card className="bg-light">
             <Card.Body>
-               {text}
+               <strong>{text.text}</strong>
             </Card.Body>
          </Card>
          <br />
